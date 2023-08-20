@@ -1,0 +1,179 @@
+*{
+    background-color: #37306B;
+}
+.heading{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2vw;
+    color: #D27685;
+}
+.maingamebox{
+    display: flex;
+    justify-content: space-around;
+}
+.tttcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.tictactoebox{
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    
+}
+.boxtext:hover{
+    background-color: #5a5293;
+}
+
+.boxtext{
+      font-size: smaller;
+      font-weight: bolder;
+      color: #E19898;
+      font-family: 'Caveat';
+      width: 100%;
+      height:100%;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      
+    
+
+}
+
+
+.box{
+    border: 4px solid #9E4784;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.turntext{
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+    font-size: 40px;
+    color:#4477CE;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    align-items: center;
+}
+#turndisplay{
+    display: flex;
+    align-items: center;
+    color:#03C988;
+    margin-left: 20px;
+    font-size: 70px;
+}
+.popup{
+    width:400px;
+    height: 50vh;
+    border-radius: 6px;
+    border: 5PX SOLID #D27685;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background-color: whitesmoke;
+    transform: translate(-50%,-50%) scale(0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 5px 5px 5px black;
+    color:#03C988;
+    font-weight: bolder;
+    visibility: hidden;
+
+}
+.close-popup{
+    visibility: hidden;
+    transform: translate(-50%,-50%) scale(0.1);
+    top: 0%;
+    left: 50%;
+    
+}
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 2s, top 2s;
+
+}
+.gif{
+    background-color: whitesmoke;
+    
+
+}
+.message{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    background-color: whitesmoke;
+
+}
+#winner{
+    margin-right: 20px;
+    color: rgb(0, 240, 160);
+    font-size: larger;
+    background-color: whitesmoke;
+}
+.popreset{
+    background-color:#4477CE;  
+    width:30%;
+    height:10%;  
+    color:#D27685;
+    margin-bottom: 15px;
+    padding: 3px;
+    font-size: 20px;;
+}
+#popupreset1:hover{
+    cursor:pointer;
+    opacity: 0.8;
+}
+#popupreset2:hover{
+    cursor:pointer;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .maingamebox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tictactoebox {
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-columns: repeat(3, 30vw);
+    }
+    .turntext{
+        font-size: 5vw;
+    }
+    #turndisplay{
+        font-size: 8vw;
+    }
+
+    .box {
+        font-size: 18vw;
+    }
+
+    .popup {
+        width: 80%;
+        height: 80vh;
+        font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .box {
+        font-size: 12vw;
+    }
+
+    .popup {
+        font-size: 14px;
+    }
+}
